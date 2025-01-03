@@ -6,7 +6,7 @@ import { db } from "./src/utils/dbConnection.js";
 import { routes } from "./src/api/router.js";
 import { setupWebSocket } from "./src/websocket/websocketServer.js";
 
-const port = config.port;
+const port = process.env.PORT || config.port;
 const app = express();
 const server = createServer(app);
 
