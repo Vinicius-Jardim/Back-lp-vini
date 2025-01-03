@@ -5,6 +5,7 @@ export const HttpStatus = {
   ACCEPTED: 202, // Accepted
   NO_CONTENT: 204, // No Content
 
+  
   // Redirection
   MOVED_PERMANENTLY: 301, // Moved Permanently
   FOUND: 302, // Found
