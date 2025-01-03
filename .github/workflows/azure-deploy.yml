@@ -1,6 +1,5 @@
 name: Deploy Node.js to Azure Web App
 
-
 on:
   push:
     branches:
@@ -8,10 +7,9 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_WEBAPP_NAME: dre-backend    
+  AZURE_WEBAPP_NAME: dre-backend-e5etfrc8dranhfd3    # Nome completo do app
   AZURE_WEBAPP_PACKAGE_PATH: '.'      
   NODE_VERSION: '18.x'                
-
 
 jobs:
   build-and-deploy:
