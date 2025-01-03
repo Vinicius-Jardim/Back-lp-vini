@@ -7,13 +7,13 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_WEBAPP_NAME: dre-backend-e5etfrc8dranhfd3    # Nome completo do app
+  AZURE_WEBAPP_NAME: dre-backend    # Nome correto do Web App
   AZURE_WEBAPP_PACKAGE_PATH: '.'      
   NODE_VERSION: '18.x'                
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
 
@@ -26,9 +26,11 @@ jobs:
       run: |
         npm install
         
-    - name: Zip artifact for deployment
-      run: zip release.zip ./* -r
-
+    - name: Prepare for deployment
+      run: |
+        Compress-Archive -Path * -DestinationPath release.zip -Force
+      shell: powershell
+        
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
