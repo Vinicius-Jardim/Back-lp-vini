@@ -59,4 +59,4 @@ jobs:
           app-name: 'dre-backend'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C88E307217A3442B8A9F61F2C25365AD }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D8D80F24466C4211845FBB3DF389FC04 }}
